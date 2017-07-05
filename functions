@@ -1,0 +1,41 @@
+# create dir and cd there
+md() { mkdir "$1"; cd "$1"; }
+
+# extract anything! omg
+# source: http://nparikh.org/notes/zshrc.txt
+extract() {
+   if [ -f $1 ]; then
+       case $1 in
+           *.tar.bz2)   tar xvjf $1    ;;
+           *.tar.gz)    tar xvzf $1    ;;
+           *.bz2)       bunzip2 $1     ;;
+           *.rar)       unrar x $1     ;;
+           *.gz)        gunzip $1      ;;
+           *.tar)       tar xvf $1     ;;
+           *.tbz2)      tar xvjf $1    ;;
+           *.tgz)       tar xvzf $1    ;;
+           *.zip)       unzip $1       ;;
+           *.Z)         uncompress $1  ;;
+           *.7z)        7z x $1        ;;
+           *)           echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file!"
+   fi
+}
+
+# refreshes SSH ENV vars when using tmux
+function r_ssh() {
+    if [[ -n $TMUX ]]; then
+        NEW_SSH_AUTH_SOCK=`tmux showenv|grep ^SSH_AUTH_SOCK|cut -d = -f 2`
+        if [[ -n $NEW_SSH_AUTH_SOCK ]] && [[ -S $NEW_SSH_AUTH_SOCK ]]; then
+            SSH_AUTH_SOCK=$NEW_SSH_AUTH_SOCK
+        fi
+    fi
+}
+
+# xml xi:include shortcut
+function xl() {
+    xmllint --xinclude $1 > temp.xml
+    vim temp.xml
+}

@@ -1,0 +1,6 @@
+# copied from: http://edoceo.com/cli/ack
+
+--break
+--color
+--smart-case
+--sort-files

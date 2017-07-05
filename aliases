@@ -1,0 +1,74 @@
+#----------------------
+# BurnzZ's
+#----------------------
+
+# Detect which `ls` flavor is in use
+if [ "$(uname)" = "Darwin" ]; then
+    args="-G"       # OS X `ls
+else
+    args="--color --group-directories-first"  # GNU `ls`
+fi
+
+alias l="ls -lhAF ${args}"
+alias lh="history | tail"
+
+alias v='vim'
+alias vd='vimdiff'
+alias vdo='vimdiff -o'
+alias c='clear'
+alias lo='logout'
+alias uzl='unzip -l'
+
+alias rm="rm -i" #safety trigger
+alias cd-="cd -" #typos
+
+# tmux stuff
+alias t='tmux'
+alias tls='tmux ls'
+alias ta='tmux a -t'
+alias tra='tmux attach-session -dt'
+alias tns='tmux new -s'
+
+# python
+alias p3='python3'
+alias p3f='pip3 freeze'
+alias p3i='pip3 install'
+alias p3u='pip3 uninstall'
+alias ea='source env/bin/activate'
+alias en='python3 -m venv env'
+
+# Git stuff
+alias g='git'
+alias gs='git status'
+alias gc='git commit -m'
+alias gp='git push origin master'
+alias gpu='git pull origin master'
+alias gsp='git submodule foreach git pull origin master'
+alias gdi='git diff'
+alias gl='git log'
+alias ga='git add'
+
+alias glg=" git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias glgh="glg | head -30"
+alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
+
+alias ..="cd .."
+alias ..2="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
+
+# easy htop filter
+alias hk='htop -u `whoami`'
+
+# To easily empty a file
+alias empty='cat /dev/null >'
+
+# tree
+alias tree='tree -C --dirsfirst'
+
+# lolcommit shortcut
+alias lolcommit_init='lolcommits --enable --delay=2 --animate=4 --fork'
+
+# docker
+alias d="docker"

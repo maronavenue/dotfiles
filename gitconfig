@@ -1,0 +1,11 @@
+[user]
+        email = mmontano@factset.com
+        name = Maron Montano
+[diff]
+        tool = vimdiff
+[difftool]
+        prompt = false
+[alias]
+        d = difftool
+[push]
+        default = matching
