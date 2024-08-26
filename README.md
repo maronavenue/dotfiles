@@ -6,8 +6,7 @@ My evolving configuration for WSL Ubuntu all over the years. Live, stable and cu
 
 ![](https://img.shields.io/badge/OS-WSL%202%20(Ubuntu%2022.04)-blue)
 
-<img src="assets/2024-08-25%2023_02_54-wezterm.png" width="1500">
-<img src="assets/2024-08-21%2019_10_02-alacritty.png" width="1500">
+<img src="assets/2024-08-27%2002_11_15.nvim.png" width="1500">
 
 ## Prologue
 
