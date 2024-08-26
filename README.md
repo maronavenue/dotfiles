@@ -112,20 +112,6 @@ There you have it. You can continue to manage and track them in their own respec
 1. Leave tiny trails of improvement. My terminal is my sanctuary-- crafted over years of experience, battles lost and won. Keeping it clean, fast and beautiful never not pays off.
 1. Keep your lines open with, well, a backup default editor. Inevitably we find ourselves working with pseudo-bare metal distros where being comfortable with native and default editors pay dividends ten-fold. I wield VS Code as my primary, but I also actively switch back to NVim as my secondary. I strive to reach a point where I feel good with `nvim .` as much as I do with `code .`.
 
-## Epilogue
-
-I dedicate this section for FDS-specific configurations and gotchas so this only exists in https://github.factset.com/mmontano/dotfiles but not in https://github.com/maronavenue/dotfiles.
-
-### 🚧 WIP 🚧
-
-- wsl-vpnkit
-- awslogin
-- factset-cli
-- lima
-- docker
-- artifactory overrides for package managers
-- wsl setup guide
-
 ## FAQs
 
 ### How do I manage multiple environments?

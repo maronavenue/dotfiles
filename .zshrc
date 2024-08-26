@@ -144,10 +144,6 @@ alias vd="vimdiff"
 alias glg=" git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
 alias glg2="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%    C(reset)' --all"
 
-alias lima="ssh -qt fxdeva14 /home/fds/svc_lima/bin/lima_token mmontano FDS"
-
-alias FDS="~/ticker.sh FDS"
-
 eval "$(starship init zsh)"
 
 # Start Docker daemon automatically when logging in if not running.
@@ -178,18 +174,6 @@ export PATH=~/.local/bin:$PATH
 colorscript -r
 
 source ~/external/zsh-quotify/quotify.plugin.zsh
-
-# ~/ticker.sh FDS
-
-# wsl.exe -d wsl-vpnkit service wsl-vpnkit start
-
-function add_reviewers() {
-	REVIEWERS=$(paste -sd, ~/gumfiles/datahub.txt)
-	PR=$(gum input --placeholder "What is your PR #?")
-	gum confirm "Ask team to review?" && gh pr edit $PR --add-reviewer $REVIEWERS
-	echo '{{ Italic "'"Added $REVIEWERS"'" }}' | gum format -t template
-	echo '{{ Bold "Done." }}' | gum format -t template
-}
 
 export PATH="$HOME/.local/bin:$PATH"
 
