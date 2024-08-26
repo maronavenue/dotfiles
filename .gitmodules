@@ -4,3 +4,6 @@
 [submodule "external/shell-color-scripts"]
 	path = external/shell-color-scripts
 	url = git@github.com:maronavenue/shell-color-scripts.git
+[submodule "external/zsh-quotify"]
+	path = external/zsh-quotify
+	url = git@github.com:maronavenue/zsh-quotify.git
