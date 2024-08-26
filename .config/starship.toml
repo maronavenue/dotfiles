@@ -1,0 +1,22 @@
+[git_branch]
+symbol = " "
+
+[time]
+disabled = false
+style = "bold #FFC0CB"
+use_12hr = true
+format = "[$time]($style) "
+
+[username]
+show_always = true
+style_root = "italic bold white"
+style_user = "italic bold white"
+
+[custom.docker]
+description = "Shows the docker symbol if the current directory has Dockerfile or docker-compose.yml files"
+command = "echo \"$(docker --version | grep -oP '\\d+\\.\\d+\\.\\d+')\""
+detect_files = ["Dockerfile", "docker-compose.yml", "docker-compose.yaml"]
+when = """ command -v docker &> /dev/null; exit (echo $?); """
+style = "bold cyan"
+symbol = "🐳 "
+format = "via [$symbol($output )]($style)"
