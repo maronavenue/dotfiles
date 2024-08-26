@@ -7,8 +7,8 @@ return {
 	automatically_reload_config = false,
 
 	-- initial launch
-	default_prog = { "wsl.exe", "--distribution", "Ubuntu-22.04" },
-	default_cwd = "\\\\wsl$\\Ubuntu-22.04\\home\\mmontano",
+	default_prog = { "wsl.exe", "--distribution", "Ubuntu-24.04" },
+	default_cwd = "\\\\wsl$\\Ubuntu-24.04\\home\\maronavenue",
 
 	-- styling
 	font = wezterm.font("Hack Nerd Font"),
@@ -31,7 +31,7 @@ return {
 
 	-- https://github.com/wez/wezterm/issues/5138
 	-- https://wezfurlong.org/wezterm/config/lua/config/front_end.html
-	front_end = "WebGpu",
+	-- front_end = "WebGpu",
 	-- otherwise, gpu renderer yields glitches on small window size
 	initial_rows = 50,
 	initial_cols = 150,
