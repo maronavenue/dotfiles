@@ -1,3 +1,6 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:maronavenue/kickstart.nvim.git
+[submodule "external/shell-color-scripts"]
+	path = external/shell-color-scripts
+	url = git@github.com:maronavenue/shell-color-scripts.git
