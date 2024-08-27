@@ -116,11 +116,11 @@ export VISUAL=nvim
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
-alias starshipconfig="nvim ~/.config/starship.toml"
-alias alacrittyconfig="nvim ~/.config/alacritty/alacritty.yml"
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias nvimconfig="nvim ~/.config/nvim/init.lua"
+alias zshconfig="$EDITOR ~/.zshrc"
+alias starshipconfig="$EDITOR ~/.config/starship.toml"
+alias alacrittyconfig="$EDITOR ~/.config/alacritty/alacritty.yml"
+alias ohmyzsh="$EDITOR ~/.oh-my-zsh"
+alias nvimconfig="$EDITOR ~/.config/nvim/init.lua"
 alias weztermconfig="$EDITOR ~/.wezterm.lua"
 # alias ll="ls -al --color=auto"
 alias ll="k -a -h --no-vcs"
